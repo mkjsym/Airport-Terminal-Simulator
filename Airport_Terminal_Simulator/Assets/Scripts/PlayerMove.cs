@@ -11,13 +11,11 @@ public class playermove : MonoBehaviour
     private Animator animator;
     private Vector3 dir = Vector3.zero;
 
-    // Start is called before the first frame update
     void Start()
     {
         rigidbody = this.GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         dir.x = Input.GetAxis("Horizontal");

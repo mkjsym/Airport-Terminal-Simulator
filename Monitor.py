@@ -36,7 +36,7 @@ def display_combined_camera_feeds():
         cam3_resized = cv2.resize(cam3_image, (960, 540))
         cam4_resized = cv2.resize(cam4_image, (960, 540))
 
-        # 위쪽 두 개, 아래쪽 두 개로 2x2 그리드 형식으로 배열
+        # 영상 2*2 놓기
         top_row = np.hstack((cam1_resized, cam2_resized))
         bottom_row = np.hstack((cam3_resized, cam4_resized))
 
@@ -45,7 +45,7 @@ def display_combined_camera_feeds():
 
         # 이미지 출력
         cv2.imshow('Combined Camera Feeds', combined_image)
-
+        
         # 'q' 키를 누르면 종료
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break

@@ -1146,7 +1146,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cb48178ecec55e4eb6ef7d4e464f3da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  renderTexture: {fileID: 8400000, guid: 95c6b69f15370b0479d6be1c304bae1f, type: 2}
+  renderTexture:
+  - {fileID: 8400000, guid: 95c6b69f15370b0479d6be1c304bae1f, type: 2}
+  - {fileID: 8400000, guid: 55e444ec67ff0d448a0095f4094cf876, type: 2}
+  - {fileID: 8400000, guid: b2bc56cb76ddf6e458dd5f06f23e46c6, type: 2}
+  - {fileID: 8400000, guid: ac00142f630234a4faf0a906d463b9c6, type: 2}
 --- !u!4 &1728838788
 Transform:
   m_ObjectHideFlags: 0
@@ -1156,7 +1160,7 @@ Transform:
   m_GameObject: {fileID: 1728838786}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

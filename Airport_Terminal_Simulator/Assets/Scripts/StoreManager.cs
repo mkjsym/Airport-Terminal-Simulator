@@ -8,7 +8,7 @@ public class CameraCaptureToSharedMemory : MonoBehaviour
     public RenderTexture[] renderTexture = new RenderTexture[4];
     private MemoryMappedFile[] ShareCam= new MemoryMappedFile[4] ; // 공유 메모리
     private MemoryMappedViewAccessor[] accessor = new MemoryMappedViewAccessor[4]; // 메모리 액세서
-    private const int sharedMemorySize = 1920 * 1080 * 3; // 예시: 1920x1080 RGB 이미지 크기
+    private const int sharedMemorySize = 1920 * 1080 * 3; 
 
     void Start()
     {
@@ -41,17 +41,17 @@ public class CameraCaptureToSharedMemory : MonoBehaviour
         capturedImage.ReadPixels(new Rect(0, 0, renderTexture[i].width, renderTexture[i].height), 0, 0);
         capturedImage.Apply();
 
-        // RenderTexture.active를 null로 설정
+        // RenderTexture.active 해제
         RenderTexture.active = null;
         byte[] imageData = capturedImage.GetRawTextureData();
-        Destroy(capturedImage);
+        Destroy(capturedImage); // 메모리 할당 해제 이거 안하면 메모리 터짐
         accessor[i].WriteArray(0, imageData, 0, imageData.Length);
     }
 
     void OnApplicationQuit()
     { 
         for(int i=0;i<4;i++){
-            accessor[i]?.Dispose();
+            accessor[i]?.Dispose(); // 할당된 메모리 해제
             ShareCam[i]?.Dispose();
         }
         

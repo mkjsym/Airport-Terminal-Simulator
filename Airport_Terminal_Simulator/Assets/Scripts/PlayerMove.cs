@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class playermove : MonoBehaviour
 {
-    private Rigidbody rigidbody;
+    new private Rigidbody rigidbody;
     public float speed = 4.0f;
     public float rotSpeed = 12f;
     private Animator animator;

@@ -1146,7 +1146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cb48178ecec55e4eb6ef7d4e464f3da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  renderTexture:
+  renderTextures:
   - {fileID: 8400000, guid: 95c6b69f15370b0479d6be1c304bae1f, type: 2}
   - {fileID: 8400000, guid: 55e444ec67ff0d448a0095f4094cf876, type: 2}
   - {fileID: 8400000, guid: b2bc56cb76ddf6e458dd5f06f23e46c6, type: 2}

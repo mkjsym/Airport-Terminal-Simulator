@@ -71,14 +71,6 @@ def display_combined_camera_feeds():
         
         
         process.stdin.write(combined_image.tobytes())
-        # 결합된 화면 출력
-        cv2.imshow('Combined Camera Feeds', combined_image)
-
-        # 'q' 키를 누르면 종료
-        if cv2.waitKey(1) & 0xFF == ord('q'):
-            break
-    cv2.destroyAllWindows()
-
 # 프로그램 실행
 if __name__ == "__main__":
     display_combined_camera_feeds()
